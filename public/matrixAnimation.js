@@ -8,7 +8,7 @@ var canvas = document.querySelector("canvas"),
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var boxSize = 6,
+var boxSize = 10,
   columns = canvas.width / boxSize;
 
   var colors = [
