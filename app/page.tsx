@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -108,16 +109,11 @@ export default function Home() {
     />
   </a>
 
-  <a
-    href=""
-    className="group relative rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-green-500 hover:bg-yellow-400 hover:dark:border-yellow-400 hover:dark:bg-green-500 flex items-start justify-start"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ padding: "8px" }} // Adjust padding for each button
-  >
+  <Link href="/sokoban-gold" passHref>
+  <div className="group relative rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-green-500 hover:bg-yellow-400 hover:dark:border-yellow-400 hover:dark:bg-green-500 flex items-start justify-start" style={{ padding: "8px" }}>
     <div className="relative z-10 transition-opacity duration-300 group-hover:opacity-0 custom-font">
       <h2 className="mb-3 text-2xl font-semibold text-left">
-        Sokoban Gold{" "}
+        Sokoban Gold{' '}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           -&gt;
         </span>
@@ -126,7 +122,6 @@ export default function Home() {
         PoW loading...
       </p>
     </div>
-
     {/* Image that displays when hovered */}
     <img
       src="/pow-logo.svg"
@@ -134,7 +129,8 @@ export default function Home() {
       className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
       style={{ mixBlendMode: 'multiply' }}
     />
-  </a>
+  </div>
+</Link>
 </div>
 
     </main>
