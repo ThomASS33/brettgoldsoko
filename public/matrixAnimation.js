@@ -2,41 +2,39 @@
 var canvas = document.querySelector("canvas"),
   ctx = canvas.getContext("2d");
 
-// Setting the width and height of the canvas
+  var canvas = document.querySelector('canvas'),
+  ctx = canvas.getContext('2d');
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Setting up the text
-var text = "BRETTGOLD";
-var textArray = text.split("");
+var boxSize = 6,
+  columns = canvas.width / boxSize;
 
-// Setting up the columns
-var fontSize = 10,
-  columns = canvas.width / fontSize;
+  var colors = [
+  "#2E9A35", "#3F9E34", "#50A233", "#62A632", "#73AA31", "#84AE30", "#95B330", "#A6B72F", "#B7BB2E", "#C9BF2D", "#DAC32C", "#EBC72B",
+  
+];
 
-// Setting up the drops
 var drops = [];
 for (var i = 0; i < columns; i++) {
-  drops[i] = 0;
+  drops[i] = Math.floor(canvas.height / boxSize);
 }
 
-// Setting up the draw function
 function draw() {
-  ctx.fillStyle = "rgba(0, 0, 0, .1)";
+  ctx.fillStyle = 'rgba(0, 0, 0, .1)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "#0f0";
-  ctx.font = fontSize + "px arial";
-
   for (var i = 0; i < drops.length; i++) {
-    var character = textArray[drops[i] % textArray.length];
-    ctx.fillText(character, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-      drops[i] = 0;
-    }
+      var colorIndex = (drops[i] + i) % colors.length;
+      ctx.fillStyle = colors[colorIndex];
+      ctx.fillRect(i * boxSize, drops[i] * boxSize, boxSize, boxSize);
+      ctx.strokeStyle = '#000';
+      ctx.strokeRect(i * boxSize, drops[i] * boxSize, boxSize, boxSize);
+      drops[i]--;
+      if (drops[i] * boxSize < 0 && Math.random() > 0.95) {
+          drops[i] = Math.floor(canvas.height / boxSize);
+      }
   }
 }
 
-// Loop the animation
-setInterval(draw, 150);
+setInterval(draw, 33);
