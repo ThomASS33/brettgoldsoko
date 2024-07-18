@@ -14,9 +14,16 @@ export default function Home() {
     width={400}
     height={37}
     priority
+
   />
 </div>
-
+<div style={{ 
+  height: '10px',              // Set the height to 40px
+  position: 'relative',        // Position relative to control pseudo-element
+  overflow: 'hidden',          // Hide overflow to control pseudo-element overflow
+}}>
+  {/* Empty content */}
+</div>
 
 
 <div className="mb-32 grid gap-4 justify-center text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left"
@@ -131,8 +138,15 @@ export default function Home() {
     />
   </div>
 </Link>
-</div>
 
+</div>
+<div style={{ 
+  height: '40px',              // Set the height to 40px
+  position: 'relative',        // Position relative to control pseudo-element
+  overflow: 'hidden',          // Hide overflow to control pseudo-element overflow
+}}>
+  {/* Empty content */}
+</div>
     </main>
   );
 }
