@@ -12,9 +12,11 @@ var boxSize = 8,
   columns = canvas.width / boxSize;
 
   var colors = [
-  "#FA75C8","#E778BB","#D57CAD","#C27FA0","#B08293","#9D8685","#8B8978","#788D6A","#66905D","#539350","#419742","#2E9A35", "#3F9E34", "#50A233", "#62A632", "#73AA31", "#84AE30", "#95B330", "#A6B72F", "#B7BB2E", "#C9BF2D", "#DAC32C", "#EBC72B", "#ECC039", "#EEB848", "#EFB156", "#F0A964", "#F2A272", "#F39A81", "#F5938F", "#F68B9D", "#EBC72B", "#F784AB", "#F97CBA", "#EBC72B"
+    "#FA75C8", "#F784AB", "#F97CBA", "#F68B9D", "#F5938F", "#F39A81", "#F2A272", "#F0A964", "#EFB156", "#EEB848", "#ECC039", "#DAC32C",
+    "#C9BF2D", "#B7BB2E", "#A6B72F", "#95B330", "#84AE30", "#73AA31", "#62A632", "#50A233", "#3F9E34", "#2E9A35"
+  ];
   
-];
+  
 
 var drops = [];
 for (var i = 0; i < columns; i++) {
