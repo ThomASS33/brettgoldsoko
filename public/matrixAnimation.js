@@ -39,4 +39,4 @@ function draw() {
 }
 
 // Loop the animation
-setInterval(draw, 100);
+setInterval(draw, 150);
