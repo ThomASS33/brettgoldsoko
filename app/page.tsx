@@ -75,30 +75,22 @@ export default function Home() {
 
     <a
   href="https://x.com/GOLDENBRETTSOL"
-  className="group relative rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-green-500 hover:bg-yellow-400 hover:dark:border-yellow-400 hover:dark:bg-green-500 flex items-start justify-start"
+  className="group relative rounded-lg  px-5 py-4 transition-colors hover:border-green-500 hover:bg-yellow-400 hover:dark:border-yellow-400 hover:dark:bg-green-500 flex items-start justify-start"
   target="_blank"
   rel="noopener noreferrer"
   style={{ padding: "8px" }}
 >
-  {/* Image that displays on load */}
+  {/* Image that displays on hover */}
   <img
     src="/twitter-logo.svg"
     alt="Twitter Logo"
-    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 opacity-100 transition-opacity duration-300 z-20"
+    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 opacity-100 transition-opacity duration-300 group-hover:opacity-100 z-10"
     style={{ mixBlendMode: 'multiply' }}
   />
-  <div className="relative z-10 transition-opacity duration-300 opacity-0 group-hover:opacity-100 custom-font">
-    <h2 className="mb-3 text-2xl font-semibold text-left">
-      #BrettGold{" "}
-      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-        -&gt;
-      </span>
-    </h2>
-    <p className="m-0 max-w-[30ch] text-sm opacity-50 text-left">
-      Follow to Twitter
-    </p>
-  </div>
 </a>
+
+
+
 
     <Link href="/sokoban-gold" passHref>
   <div className="group relative z-10 rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-green-500 hover:bg-yellow-400 hover:dark:border-yellow-400 hover:dark:bg-green-500 flex items-start justify-start" style={{ padding: "8px" }}>
