@@ -3,17 +3,18 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24 bg-gradient-to-b from-ebc72b to-2e9a35">
-  <div className="relative z-[1] flex place-items-center">
-    <Image
-      className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-      src="/brettGold-logo.png"
-      alt="BrettGold Logo"
-      width={400}
-      height={37}
-      priority
-    />
-  </div>
+    <main className="flex flex-col items-center justify-between p-24 ">
+  <div className="relative w-full h-80 flex items-center justify-center" style={{ marginTop: '-15%' }}>
+
+        <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/brettGold-logo.png"
+          alt="BrettGold Logo"
+          width={400}  // Increased width
+          height={74}  // Increased height
+          priority
+        />
+      </div>
 
   {/* Spacer */}
   <div style={{ height: '10px' }}></div>
