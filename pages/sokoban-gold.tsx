@@ -4,7 +4,6 @@ import Head from 'next/head';
 const SokobanGold: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [speed, setSpeed] = useState(50); // Default speed
-  const [isReversed, setIsReversed] = useState(false); // State to track reverse direction
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -57,8 +56,7 @@ const SokobanGold: React.FC = () => {
 
   const handleReverse = () => {
     if (window.matrixAnimation) {
-      setIsReversed(!isReversed); // Toggle reverse state
-      window.matrixAnimation.reverse(); // Call the reverse function from matrixAnimation
+      window.matrixAnimation.reverse();
     }
   };
 
@@ -87,7 +85,7 @@ const SokobanGold: React.FC = () => {
             onClick={handleReverse}
             className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
           >
-            {isReversed ? 'Forward Animation' : 'Reverse Animation'}
+            Reverse Animation
           </button>
           <div className="mt-4">
             <label htmlFor="speedControl" className="mr-2">Animation Speed (ms):</label>
