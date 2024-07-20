@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
-  <div className="relative w-full h-80 flex items-center justify-center" >
+  <div className="relative w-full h-60 flex items-center justify-center" >
 
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
@@ -16,8 +16,6 @@ export default function Home() {
         />
       </div>
 
-  {/* Spacer */}
-  <div style={{ height: '10px' }}></div>
 
   <div className="mb-32 grid gap-4 justify-center text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
    
