@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 
 const SokobanGold: React.FC = () => {
@@ -25,40 +25,40 @@ const SokobanGold: React.FC = () => {
     };
   }, []);
 
-  const handlePause = () => {
+  const handlePause = useCallback(() => {
     if (window.matrixAnimation) {
       setIsPaused(true);
       window.matrixAnimation.pause();
     }
-  };
+  }, []);
 
-  const handleResume = () => {
+  const handleResume = useCallback(() => {
     if (window.matrixAnimation) {
       setIsPaused(false);
       window.matrixAnimation.resume();
     }
-  };
+  }, []);
 
-  const handleSpeedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSpeedChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const newSpeed = parseInt(event.target.value, 10);
     setSpeed(newSpeed);
     if (window.matrixAnimation) {
       window.matrixAnimation.setSpeed(newSpeed);
     }
-  };
+  }, []);
 
-  const handleRestart = () => {
+  const handleRestart = useCallback(() => {
     if (window.matrixAnimation) {
       window.matrixAnimation.restart();
       setIsPaused(false); // Ensure the animation is not paused after restart
     }
-  };
+  }, []);
 
-  const handleReverse = () => {
+  const handleReverse = useCallback(() => {
     if (window.matrixAnimation) {
       window.matrixAnimation.reverse();
     }
-  };
+  }, []);
 
   return (
     <>
