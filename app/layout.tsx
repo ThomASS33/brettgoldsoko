@@ -18,10 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        {/* Bring the <main> element to the front */}
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          {children}
+        </main>
         
         {/* Empty canvas element for the matrix animation */}
-        <canvas id="matrixCanvas" className="fixed top-0 left-0 w-10 h-10 z-0"></canvas>
+        <canvas id="matrixCanvas"></canvas>
         
         {/* Include your script here */}
         <Script src="/matrixAnimation.js" strategy="afterInteractive" />
